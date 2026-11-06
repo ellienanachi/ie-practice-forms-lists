@@ -12,6 +12,7 @@ export default function Problem4() {
   function handleDelete(id) {
     // TODO: use filter to return only items whose id
     // does NOT match — that removes the clicked one.
+    setItems(items.filter((item) => item.id !== id))
   }
 
   return (

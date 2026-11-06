@@ -13,6 +13,13 @@ export default function Problem3() {
     // TODO: use map to return a new array where the item
     // with the matching id has completed flipped,
     // and all other items are returned unchanged.
+    setItems(
+      items.map((item) =>
+        item.id === id
+      ? { ...item, completed: !item.completed }
+      : item
+      )
+    )
   }
 
   return (

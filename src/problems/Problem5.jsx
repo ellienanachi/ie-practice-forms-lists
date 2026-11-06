@@ -8,6 +8,7 @@ export default function Problem5() {
     // TODO: update only the field that changed.
     // Use e.target.name as the key, e.target.value as the value.
     // Spread the rest of form so the other field isn't lost.
+    setForm({ ...form, [e.target.name]: e.target.value })
   }
 
   function handleSubmit(e) {
