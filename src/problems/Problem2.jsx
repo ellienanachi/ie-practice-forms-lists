@@ -7,9 +7,14 @@ export default function Problem2() {
   function handleSubmit(e) {
     // TODO:
     // 1. Prevent the page from reloading
+    e.preventDefault()
     // 2. Trim text — skip (return early) if it's empty
+    const trimmed = text.trim()
+    if (!trimmed) return
     // 3. Add a new object to items: { id: crypto.randomUUID(), text: trimmed }
+    setItems([...items, { id: crypto.randomUUID(), text: trimmed }])
     // 4. Clear the input back to ''
+    setText('')
   }
 
   return (

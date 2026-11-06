@@ -1,7 +1,7 @@
-import { useState } from 'react'
+import { useState } from "react";
 
 export default function Problem1() {
-  const [text, setText] = useState('')
+  const [text, setText] = useState("");
 
   return (
     <div>
@@ -9,10 +9,14 @@ export default function Problem1() {
       <p>Wire up this input so it becomes a controlled component.</p>
 
       {/* TODO: add value and onChange props to the input below */}
-      <input placeholder="Type here..." />
+      <input
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        placeholder="Type here..."
+      />
 
       {/* TODO: display the current value of text below */}
-      <p>You typed: </p>
+      <p>You typed: {text}</p>
     </div>
-  )
+  );
 }
